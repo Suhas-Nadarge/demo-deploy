@@ -13,10 +13,10 @@ export class HistoryService {
 
   constructor(public _http: HttpClient) { }
   getAllHistory(username: any): any {
-    return this._http.post('http://51.124.209.121:5000/get_history', {username:username},this.httpOptions);
+    return this._http.post('https://51.124.209.121:5000/get_history', {username:username},this.httpOptions);
   }
 
   deleteHistory(requestObj: any): any {
-    return this._http.post('http://51.124.209.121:5000/delete_history', requestObj,this.httpOptions);
+    return this._http.post('https://51.124.209.121:5000/delete_history', requestObj,this.httpOptions);
   }
 }
